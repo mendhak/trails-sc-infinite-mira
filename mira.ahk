@@ -1,6 +1,6 @@
 #SingleInstance force
 
-SetKeyDelay, 500, 60
+SetKeyDelay, 500, 20
 
 DoLoop() {
 
@@ -8,11 +8,13 @@ DoLoop() {
   Send {Enter}
   Send {Down}
   Send {Enter}
+  Sleep, 3000
 
   ; buy
   Send {Enter}
 
   ; red pepper
+  Sleep, 400
   Send {Up}
   Send {Up}
   Send {Enter}
@@ -88,12 +90,9 @@ DoLoop() {
 
   ; craft
   Send c
+  Sleep, 3000
 
   ; tempura
-  Send {Down}
-  Send {Down}
-  Send {Down}
-  Send {Down}
   Send {Down}
 
   Send {Enter}
@@ -112,6 +111,7 @@ DoLoop() {
   Send {Enter}
   Send {Down}
   Send {Enter}
+  Sleep, 3000
 
   ; sell menu
   Send {Down}
@@ -138,8 +138,9 @@ DoLoop() {
   Sleep, 1000
 }
 
+
 AppsKey::
-  Loop, 1000
+  Loop, 2
   {
     Tooltip, Iteration %A_Index%
     DoLoop()
